@@ -23,13 +23,7 @@ class SaveemailController extends Controller
 
 
 
-        Yii::$app->mailer->compose()
-            ->setFrom('vasa11514@gmail.com')
-            ->setTo('korotyailya1997@gmail.com')
-            ->setSubject('Уведемление с сайта ') // тема письма
-            ->setTextBody('Текстовая версия письма (без HTML)')
-            ->setHtmlBody('<p>HTML версия письма</p>')
-            ->send();
+
 
 
         return $this->render('index.php');
