@@ -58,8 +58,11 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public $layout = 'startmain';//новый шаблон
+
     public function actionIndex()
     {
+
         return $this->render('index');
     }
 
