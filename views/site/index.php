@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+
 $this->title = 'My Yii Application';
 ?>
 
@@ -79,7 +81,7 @@ $this->title = 'My Yii Application';
 
                 <!--Go to ф-->
                 <div id="mc_embed_signup">
-                    <form action="php/index.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="<?=Url::toRoute(['saveemail/index']);?>" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
                                 <input type="еmail" value="" placeholder="Введите свой email" name="EMAIL" class="required email" id="top-email" style="color:#000;
@@ -293,7 +295,7 @@ width:340px;
 
 
                     <!--Bot button-->
-                    <form action="php/index.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="<?=Url::toRoute(['saveemail/index']);?>" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
                                 <input type="email" value="" placeholder="Введите свой email" name="EMAIL" class="required email" id="bot-email" style="color:#000;
