@@ -26,7 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'messages_id',
-            'status',
+            [
+                'attribute' => 'status',
+                'label' => 'Status',
+                'format' => 'html',
+                'content' => function($data){
+                    return Html::img("@web/status_icon/".$data->getIcon() ,['width'=>50, 'height'=>50]);
+                },
+            ],
             'counter_sender',
 
             ['class' => 'yii\grid\ActionColumn'],

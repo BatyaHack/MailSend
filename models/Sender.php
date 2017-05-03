@@ -53,7 +53,14 @@ class Sender extends \yii\db\ActiveRecord
 
 
 
-
+    public function getIcon(){
+        if ($this->status == 1){
+            return "galochka-check_128x128.png";
+        }
+        else{
+            return "delete_128x128.png";
+        }
+    }
 
 
 
