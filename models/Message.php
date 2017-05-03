@@ -44,4 +44,11 @@ class Message extends \yii\db\ActiveRecord
             'atach' => 'Atach',
         ];
     }
+
+    //Вернем файлы, который нужно прикрепить
+    public function getFiles()
+    {
+        return $this->hasMany(Atach::className(), ['many_id'=>'id']);
+    }
+
 }

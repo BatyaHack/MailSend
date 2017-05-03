@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\Atach;
 use app\models\ImgUpload;
 use Yii;
 use app\models\Message;
@@ -133,13 +134,17 @@ class MessageController extends Controller
 
         if(Yii::$app->request->post())
         {
+
+
             $file = UploadedFile::getInstance($model, 'image');
             $name_file = $model->imageUpload($file);
 
-            //Сохраняем имя файла в поле!
-            $message = Message::findOne($id);
-            $message->atach = $name_file;
-            $message->save(false);
+
+            //сохраням файл для письма в новый таблице
+            $new_file = new Atach();
+            $new_file->file_name = $name_file;
+            $new_file->many_id = $id;
+            $new_file->save(false);
         }
 
         return $this->render('img', [

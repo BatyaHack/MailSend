@@ -134,9 +134,15 @@ class SenderController extends Controller
 
             $addres = array_slice($addres, $send_mail->counter_sender, $send_mail->counter_sender+1);
 
-            $data = Yii::getAlias('@app'). "/web/" . "uploads/" . $send_mail->message->atach;
+            $data_array = [];
+            $files = $send_mail->message->files;
+            foreach ($files as $file){
+                $data_array[] = (Yii::getAlias('@app'). "/web/" . "uploads/" . $file->file_name);
+            }
 
-            Sender::sendEmail($addres[0]->email, $data,  $send_mail->message->title,  $send_mail->message->body, false);
+
+
+            Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,  $send_mail->message->body, false);
 
 
             $send_mail->counter_sender++;

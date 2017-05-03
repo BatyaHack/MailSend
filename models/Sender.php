@@ -75,7 +75,9 @@ class Sender extends \yii\db\ActiveRecord
             ->setTextBody($textbody)
             ->setHtmlBody($htmlbody);
         if($data!=false){
-            $mail->attach($data);
+            foreach ($data as $s){
+                $mail->attach($s);//комментарий чисто для коммита. так как я забыл его сделать и пушанул.
+            }
         }
         $mail->send();
     }
