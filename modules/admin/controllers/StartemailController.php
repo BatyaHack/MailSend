@@ -73,6 +73,8 @@ class StartemailController extends Controller
 
 
 
+
+
     //Метод отправки письма
     private function sendEmail($address, $data=false, $subject=false, $textbody=false, $htmlbody=false){
        $mail = Yii::$app->mailer->compose()
