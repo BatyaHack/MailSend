@@ -66,6 +66,30 @@ class EmaillistController extends Controller
                 $mail->email = $find_array[0][$i];
                 $mail->save(false);
             }
+
+
+
+            //Почистим бд от одинаковых эмейлов
+
+            $all_mail = Emaillist::find()->all();
+
+            $only_mail = []; //Заполним массив только чистыми эмейлами
+            foreach ($all_mail as $m){
+                $only_mail[] = $m->email;
+            }
+
+            $only_mail = array_unique ($only_mail);//избавимя от повторений
+            Emaillist::deleteAll();//делаем через костыли!!! Чистим табилцу
+
+            //Переписывам таблицу
+            foreach ($only_mail as $m)
+            {
+                $mail = new Emaillist();
+                $mail->email = $m;
+                $mail->save(false);
+            }
+
+            //------------------------------------//
         }
 
 
