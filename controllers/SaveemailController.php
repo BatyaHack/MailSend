@@ -16,16 +16,26 @@ class SaveemailController extends Controller
 
         $request = Yii::$app->request;
         $get = $request->get();
-        //Добавлям в бд
-        $email = new Emaillist();
-        $email->email = $get['EMAIL'];
-        $email->save();
+
+        if(preg_match('/(\S+@[a-z0-9.]*)/si', $get['EMAIL'])) {
+            //Добавлям в бд
+            $email = new Emaillist();
+            $email->email = $get['EMAIL'];
+            $email->save();
+
+            $answer = "Спасибо. Вы подписаны на рассылку!";
+        } else{
+            $answer = "Не корректный email адресс";
+        }
 
 
 
 
 
 
-        return $this->render('index.php');
+
+        return $this->render('index.php', [
+            'answer' => $answer,
+        ]);
     }
 }

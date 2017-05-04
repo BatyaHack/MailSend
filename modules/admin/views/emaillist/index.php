@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <h3>Выбирите файл</h3>
         <div class="form-group">
-            <?= $form->field($model, 'image')->fileInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'image', ['inputOptions'=>['required'=>'required']])->fileInput(['maxlength' => true]) ?>
         </div>
 
         <div class="form-group">
