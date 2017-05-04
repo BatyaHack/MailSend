@@ -51,4 +51,9 @@ class Message extends \yii\db\ActiveRecord
         return $this->hasMany(Atach::className(), ['many_id'=>'id']);
     }
 
+    public function getListFiles()
+    {
+        //просто так
+    }
+
 }

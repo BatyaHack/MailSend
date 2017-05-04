@@ -27,8 +27,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'body',
-            'atach',
-
+            [
+                'attribute' => 'atach',
+                'label' => 'file',
+                'format' => 'html',
+                'content' => function($data){
+                    $result_file = '';
+                    foreach ($data->files as $file){
+                         $result_file = $result_file.strval($file->file_name)."<br/>";
+                    }
+                    return $result_file;
+                },
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
