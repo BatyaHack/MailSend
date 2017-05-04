@@ -23,9 +23,9 @@ class SaveemailController extends Controller
             $email->email = $get['EMAIL'];
             $email->save();
 
-            $answer = "Спасибо. Вы подписаны на рассылку!";
+            echo "Спасибо. Вы подписаны на рассылку!";
         } else{
-            $answer = "Не корректный email адресс";
+            echo "Email не корректен!";
         }
 
 
@@ -33,9 +33,10 @@ class SaveemailController extends Controller
 
 
 
-
+        /* Рендер ответ представления. Если мы хотим работать не через ajax
         return $this->render('index.php', [
             'answer' => $answer,
         ]);
+        */
     }
 }

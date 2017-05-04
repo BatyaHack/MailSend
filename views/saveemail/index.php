@@ -4,4 +4,4 @@ use \yii\helpers\Url;
 
 <?= $answer?>
 
-<a href="<?=Url::toRoute(["/"])?>">Вернуться на главную</a>
+<a href="/">Вернуться на главную</a>

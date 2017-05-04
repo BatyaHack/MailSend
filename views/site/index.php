@@ -21,7 +21,7 @@ $this->title = 'My Yii Application';
             <!-- m_editable region-id="editable-static-tag-U325-BP_infinity" template="index.html" data-type="image" -->
             <div class="clip_frame grpelem" id="u325" data-muse-uid="U325" data-muse-type="img_frame">
                 <!-- image -->
-                <img class="block" id="u325_img" src="images/logo_small.png?crc=305270164" alt="" data-muse-src="images/logo_small.png?crc=305270164" data-image-width="101" data-image-height="47" />
+                <img class="block" id="u325_img" src="web/images/logo_small.png?crc=305270164" alt="" data-muse-src="images/logo_small.png?crc=305270164" data-image-width="101" data-image-height="47" />
             </div>
             <!-- /m_editable -->
         </div>
@@ -38,7 +38,7 @@ $this->title = 'My Yii Application';
                 <!-- m_editable region-id="editable-static-tag-U293-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame grpelem" id="u293" data-muse-uid="U293" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u293_img" src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" alt="" width="16" height="15" data-muse-src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" />
+                    <img class="block" id="u293_img" src="web/images/privacy_03_04_2015_18_29_23.png?crc=3864781542" alt="" width="16" height="15" data-muse-src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" />
                 </div>
                 <!-- /m_editable -->
             </div>
@@ -67,12 +67,12 @@ $this->title = 'My Yii Application';
             <div class="grpelem" id="u354">
                 <!-- simple frame -->
             </div>
-            <img class="grpelem" id="u527-4" alt="TRADE SHOT" src="images/u527-4.png?crc=52001165" data-image-width="499" />
+            <img class="grpelem" id="u527-4" alt="TRADE SHOT" src="web/images/u527-4.png?crc=52001165" data-image-width="499" />
             <!-- rasterized frame -->
             <!-- m_editable region-id="editable-static-tag-U532-BP_infinity" template="index.html" data-type="image" -->
             <div class="clip_frame grpelem" id="u532" data-muse-uid="U532" data-muse-type="img_frame">
                 <!-- image -->
-                <img class="block" id="u532_img" src="images/image4.png?crc=97377589" alt="" data-muse-src="images/image4.png?crc=97377589" data-image-width="334" data-image-height="334" />
+                <img class="block" id="u532_img" src="web/images/image4.png?crc=97377589" alt="" data-muse-src="images/image4.png?crc=97377589" data-image-width="334" data-image-height="334" />
             </div>
             <!-- /m_editable -->
             <div class="grpelem" id="u165">
@@ -151,7 +151,7 @@ width:340px;
             <!-- m_editable region-id="editable-static-tag-U142-BP_infinity" template="index.html" data-type="image" -->
             <div class="clip_frame grpelem" id="u142" data-muse-uid="U142" data-muse-type="img_frame">
                 <!-- image -->
-                <img class="block" id="u142_img" src="images/pfgmpnarjba.png?crc=3994563232" alt="" data-muse-src="images/pfgmpnarjba.png?crc=3994563232" data-image-width="164" data-image-height="164" />
+                <img class="block" id="u142_img" src="web/images/pfgmpnarjba.png?crc=3994563232" alt="" data-muse-src="images/pfgmpnarjba.png?crc=3994563232" data-image-width="164" data-image-height="164" />
             </div>
             <!-- /m_editable -->
             <div class="clearfix grpelem" id="pu108-4">
@@ -182,31 +182,31 @@ width:340px;
                 <!-- m_editable region-id="editable-static-tag-U218-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame colelem" id="u218" data-muse-uid="U218" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u218_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                    <img class="block" id="u218_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
                 </div>
                 <!-- /m_editable -->
                 <!-- m_editable region-id="editable-static-tag-U228-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame colelem" id="u228" data-muse-uid="U228" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u228_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                    <img class="block" id="u228_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
                 </div>
                 <!-- /m_editable -->
                 <!-- m_editable region-id="editable-static-tag-U235-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame colelem" id="u235" data-muse-uid="U235" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u235_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                    <img class="block" id="u235_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
                 </div>
                 <!-- /m_editable -->
                 <!-- m_editable region-id="editable-static-tag-U242-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame colelem" id="u242" data-muse-uid="U242" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u242_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                    <img class="block" id="u242_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
                 </div>
                 <!-- /m_editable -->
                 <!-- m_editable region-id="editable-static-tag-U249-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame colelem" id="u249" data-muse-uid="U249" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u249_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                    <img class="block" id="u249_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
                 </div>
                 <!-- /m_editable -->
             </div>
@@ -249,7 +249,7 @@ width:340px;
             <!-- m_editable region-id="editable-static-tag-U256-BP_infinity" template="index.html" data-type="image" -->
             <div class="clip_frame grpelem" id="u256" data-muse-uid="U256" data-muse-type="img_frame">
                 <!-- image -->
-                <img class="block" id="u256_img" src="images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
+                <img class="block" id="u256_img" src="web/images/actions-games-endturn-icon.png?crc=4132685734" alt="" data-muse-src="images/actions-games-endturn-icon.png?crc=4132685734" data-image-width="38" data-image-height="38" />
             </div>
             <!-- /m_editable -->
             <!-- m_editable region-id="editable-static-tag-U278-BP_infinity" template="index.html" data-type="html" data-ice-options="disableImageResize,link" -->
@@ -272,7 +272,7 @@ width:340px;
                 <!-- m_editable region-id="editable-static-tag-U306-BP_infinity" template="index.html" data-type="image" -->
                 <div class="clip_frame grpelem" id="u306" data-muse-uid="U306" data-muse-type="img_frame">
                     <!-- image -->
-                    <img class="block" id="u306_img" src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" alt="" width="16" height="15" data-muse-src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" />
+                    <img class="block" id="u306_img" src="web/images/privacy_03_04_2015_18_29_23.png?crc=3864781542" alt="" width="16" height="15" data-muse-src="images/privacy_03_04_2015_18_29_23.png?crc=3864781542" />
                 </div>
                 <!-- /m_editable -->
             </div>

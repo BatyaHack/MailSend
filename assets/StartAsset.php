@@ -22,6 +22,7 @@ class StartAsset extends AssetBundle
         'css/site_global.css'
     ];
     public $js = [
+        'js/sendFormEmail.js'
     ];
     public $depends = [
 
