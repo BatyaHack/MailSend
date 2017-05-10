@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Emaillist */
 
-$this->title = 'Update Emaillist: ' . $model->id;
+$this->title = 'Обновить email: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Emaillists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

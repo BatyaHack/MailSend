@@ -12,14 +12,14 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'messages_id')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'messages_id')->textInput(['maxlength' => true])->label("ID письмя для рассылки") ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->textInput()->label("Статус") ?>
 
-    <?= $form->field($model, 'counter_sender')->textInput() ?>
+    <?= $form->field($model, 'counter_sender')->textInput()->label("Кол-во отпр.") ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

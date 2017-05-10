@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SenderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Senders';
+$this->title = 'Рассылка';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sender-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Sender', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать рассылку', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,17 +24,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'messages_id',
+
+            [
+                'attribute'=>'messages_id',
+                'label'=>'Письмо-содержание'
+            ],
             [
                 'attribute' => 'status',
-                'label' => 'Status',
+                'label' => 'Статус',
                 'format' => 'html',
                 'content' => function($data){
                     return Html::img("@web/status_icon/".$data->getIcon() ,['width'=>50, 'height'=>50]);
                 },
             ],
-            'counter_sender',
+            [
+                'attribute'=>'counter_sender',
+                'label' => 'Кол-во отправленных'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

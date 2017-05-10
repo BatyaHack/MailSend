@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\MessageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Messages';
+$this->title = 'Сообщение';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="message-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Message', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать сообщение ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,12 +24,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'title',
-            'body',
+            [
+                'attribute'=>'title',
+                'label'=>'Заголовк'
+            ],
+            [
+                'attribute'=>'body',
+                'label'=>'Тело'
+            ],
             [
                 'attribute' => 'atach',
-                'label' => 'file',
+                'label' => 'Файлы',
                 'format' => 'html',
                 'content' => function($data){
                     $result_file = '';

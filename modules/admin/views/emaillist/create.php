@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Emaillist */
 
-$this->title = 'Create Emaillist';
+$this->title = 'Добавить email';
 $this->params['breadcrumbs'][] = ['label' => 'Emaillists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

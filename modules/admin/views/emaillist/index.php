@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $searchModel app\models\EmaillistSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Emaillists';
+$this->title = 'Список email';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="emaillist-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Emaillist', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить почту', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,8 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'email:email',
+
+            [
+                'attribute' => 'email',
+                'label'=>'Почта'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

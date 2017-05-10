@@ -12,14 +12,14 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true])->label("Заголовок")?>
 
-    <?= $form->field($model, 'body')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'body')->textarea(['maxlength' => true, 'rows'=>'20'])->label("Тело") ?>
 
-    <?= $form->field($model, 'atach')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'atach')->textInput(['maxlength' => true])->label("Прикрепленный файл") ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
