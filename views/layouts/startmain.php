@@ -26,6 +26,41 @@ StartAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<?php/*
+NavBar::begin([
+    'brandLabel' => 'My Company',
+    'brandUrl' => "/",
+    'options' => [
+        'class' => 'navbar-inverse navbar-fixed-top',
+    ],
+]);
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'items' => [
+        ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
+        ['label' => 'Рассылки', 'url' => ['/admin/sender/index']],
+        ['label' => 'Начать рассылку. *Cron', 'url' => ['/admin/sender/start']],
+        ['label' => 'Сообщения', 'url' => ['/admin/message/index']],
+
+
+        Yii::$app->user->isGuest ? (
+            ['label' => 'Login', 'url' => ['/site/login']]
+        ) : (
+            '<li>'
+            . Html::beginForm(['/site/logout'], 'post')
+            . Html::submitButton(
+                'Logout (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link logout']
+            )
+            . Html::endForm()
+            . '</li>'
+        )
+    ],
+]);
+NavBar::end();
+*/?>
+
+
 <?=$content?>
 
 <?php $this->endBody() ?>

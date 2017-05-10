@@ -27,23 +27,21 @@ class Module extends \yii\base\Module
         // custom initialization code goes here
     }
 
-    public function beforeControllerAction($controller, $action)
+    public function behaviors()
     {
-        if(parent::beforeControllerAction($controller, $action))
-        {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => [],
+                'rules' => [
+                    [
+                        'allow' => true,
 
-            if (Yii::$app->user->getId()==null) {
-                // the URL that the user should be redirected to after login.
-                Yii::$app->user->setReturnUrl(Yii::app()->getRequest()->requestUri);
-                Yii::$app->getRequest()->redirect('/login');
-            }
-            $controller->layout = 'main';
-            // this method is called before any module controller action is performed
-            // you may place customized code here
-
-            return true;
-        }
-        else
-            return false;
+                        'actions' => ['index'],
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
     }
 }
