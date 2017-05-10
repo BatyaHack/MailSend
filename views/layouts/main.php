@@ -38,7 +38,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Email-List', 'url' => ['/admin/emaillist/index']],
             ['label' => 'Sender', 'url' => ['/admin/sender/index']],
-            ['label' => 'Sender-start', 'url' => ['/admin/message/start']],
+            ['label' => 'Sender-start', 'url' => ['/admin/sender/start']],
             ['label' => 'Message', 'url' => ['/admin/message/index']],
 
             //БЛОК ЛОГИНА

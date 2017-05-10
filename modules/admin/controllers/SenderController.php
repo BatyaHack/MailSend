@@ -6,6 +6,7 @@ use app\models\Emaillist;
 use Yii;
 use app\models\Sender;
 use app\models\SenderSearch;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -148,5 +149,7 @@ class SenderController extends Controller
             $send_mail->counter_sender++;
             $send_mail->save(false);
         }
+
+        return $this->redirect(Url::to("index"));
     }
 }
