@@ -41,6 +41,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'counter_sender',
                 'label' => 'Кол-во отправленных'
             ],
+            [
+                'attribute'=>'data_publish',
+                'label'=>'Дата пабликации'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

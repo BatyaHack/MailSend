@@ -15,6 +15,8 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea:odd' });</script>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
@@ -36,10 +38,10 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Email-List', 'url' => ['/admin/emaillist/index']],
-            ['label' => 'Sender', 'url' => ['/admin/sender/index']],
-            ['label' => 'Sender-start', 'url' => ['/admin/sender/start']],
-            ['label' => 'Message', 'url' => ['/admin/message/index']],
+            ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
+            ['label' => 'Рассылки', 'url' => ['/admin/sender/index']],
+            ['label' => 'Начать рассылку. *Cron', 'url' => ['/admin/sender/start']],
+            ['label' => 'Сообщения', 'url' => ['/admin/message/index']],
 
             //БЛОК ЛОГИНА
             /*

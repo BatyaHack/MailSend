@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'counter_sender')->textInput()->label("Кол-во отпр.") ?>
 
+    <?= $form->field($model, 'data_publish')->textInput()->label("Дата рассылки. В формате: гггг-мм-дд")?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

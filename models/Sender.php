@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use data;
 use Yii;
 
 /**
@@ -11,6 +12,7 @@ use Yii;
  * @property string $messages_id
  * @property integer $status
  * @property integer $counter_sender
+ * @property data  $data_publish
  */
 class Sender extends \yii\db\ActiveRecord
 {
@@ -30,6 +32,7 @@ class Sender extends \yii\db\ActiveRecord
         return [
             [['status', 'counter_sender'], 'integer'],
             [['messages_id'], 'string', 'max' => 255],
+            [['data_publish'], 'required']
         ];
     }
 
@@ -43,6 +46,7 @@ class Sender extends \yii\db\ActiveRecord
             'messages_id' => 'Messages ID',
             'status' => 'Status',
             'counter_sender' => 'Counter Sender',
+            'data_publish' => 'Data Publish'
         ];
     }
 
@@ -72,11 +76,15 @@ class Sender extends \yii\db\ActiveRecord
             ->setFrom('vasa11514@gmail.com')
             ->setTo($address)
             ->setSubject($subject) // тема письма
-            ->setTextBody($textbody)
-            ->setHtmlBody($htmlbody);
+            ->setTextBody($textbody);
+
+        if($htmlbody!=false){
+            $mail->setHtmlBody($htmlbody);
+        }
+
         if($data!=false){
             foreach ($data as $s){
-                $mail->attach($s);//комментарий чисто для коммита. так как я забыл его сделать и пушанул.
+                $mail->attach($s);
             }
         }
         $mail->send();

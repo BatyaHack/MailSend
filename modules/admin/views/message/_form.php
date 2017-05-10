@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'body')->textarea(['maxlength' => true, 'rows'=>'20'])->label("Тело") ?>
 
-    <?= $form->field($model, 'atach')->textInput(['maxlength' => true])->label("Прикрепленный файл") ?>
+    <?= $form->field($model, 'html_body')->textarea(['maxlength' => true, 'rows'=>'20'])->label("Html тело") ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

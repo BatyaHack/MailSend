@@ -11,6 +11,7 @@ use Yii;
  * @property string $title
  * @property string $body
  * @property string $atach
+ * @property string $html_body
  */
 class Message extends \yii\db\ActiveRecord
 {
@@ -29,6 +30,7 @@ class Message extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'body', 'atach'], 'string', 'max' => 255],
+            [['html_body'], 'string'],
         ];
     }
 
@@ -42,6 +44,7 @@ class Message extends \yii\db\ActiveRecord
             'title' => 'Title',
             'body' => 'Body',
             'atach' => 'Atach',
+            'html_body'=>'html_body',
         ];
     }
 

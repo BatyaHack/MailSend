@@ -126,10 +126,8 @@ class SenderController extends Controller
 
     public function actionStart()
     {
-        $obj = Sender::find()->where(['status'=>'1'])->all();
+        $obj = Sender::find()->where(['status'=>'1', 'data_publish'=>date("Y-m-d")])->all();
 
-
-        //еще нужно внутри обходить пользователей с текущего до конца!
         foreach ($obj as $send_mail){
             $addres = Emaillist::find()->all(); //хотя можно сразу брать одного пользователя, а не всех!
 
@@ -143,7 +141,8 @@ class SenderController extends Controller
 
 
 
-            Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,  $send_mail->message->body, false);
+            Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,
+                              $send_mail->message->body, $send_mail->message->html_body);
 
 
             $send_mail->counter_sender++;
