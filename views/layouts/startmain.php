@@ -26,23 +26,10 @@ StartAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<?php/*
-NavBar::begin([
-    'brandLabel' => 'My Company',
-    'brandUrl' => "/",
-    'options' => [
-        'class' => 'navbar-inverse navbar-fixed-top',
-    ],
-]);
+<div style="display: flex; justify-content: flex-start">
+<?php
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav navbar-right'],
     'items' => [
-        ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
-        ['label' => 'Рассылки', 'url' => ['/admin/sender/index']],
-        ['label' => 'Начать рассылку. *Cron', 'url' => ['/admin/sender/start']],
-        ['label' => 'Сообщения', 'url' => ['/admin/message/index']],
-
-
         Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'url' => ['/site/login']]
         ) : (
@@ -57,9 +44,11 @@ echo Nav::widget([
         )
     ],
 ]);
-NavBar::end();
-*/?>
+?>
 
+<a style="padding: 10px 7px" href="<?=\yii\helpers\Url::to("/admin")?>">Админ Панель</a>
+
+</div>
 
 <?=$content?>
 

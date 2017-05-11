@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on 
+
+RewriteCond %{REQUEST_URI} !^/(web)
+RewriteRule (.*) /web/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f/(web)
+RewriteCond %{REQUEST_FILENAME} !-d/(web)
+RewriteRule . /web/index.php

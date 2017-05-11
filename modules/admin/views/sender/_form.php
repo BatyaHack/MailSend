@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Sender */
@@ -18,7 +19,20 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'counter_sender')->textInput()->label("Кол-во отпр.") ?>
 
-    <?= $form->field($model, 'data_publish')->textInput()->label("Дата рассылки. В формате: гггг-мм-дд")?>
+
+    <div class="form-group">
+        <label>Дата</label>
+        <?= DatePicker::widget([
+            'model' => $model,
+            'attribute' => 'data_publish',
+            'template' => '{addon}{input}',
+            'clientOptions' => [
+                'autoclose' => true,
+                'format' => 'yyyy-mm-dd'
+            ]
+        ]);?>
+    </div>
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

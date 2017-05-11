@@ -1,5 +1,5 @@
 $(function() {
-    $('form').submit(function(e) {
+    $('#mc-embedded-subscribe-form').submit(function(e) {
         var $form = $(this);
         $.ajax({
             type: $form.attr('method'),
