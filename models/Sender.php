@@ -66,8 +66,13 @@ class Sender extends \yii\db\ActiveRecord
         }
     }
 
-
-
+    //Метод возвращения заголовка статей
+    public function getTitleMessages($id)
+    {
+        $senter = Sender::find()->where("id=$id")->one();
+        $message = Message::find()->where("id=$senter->messages_id")->one();
+        return $message->title;
+    }
 
 
     //Метод отправки письма
@@ -89,4 +94,6 @@ class Sender extends \yii\db\ActiveRecord
         }
         $mail->send();
     }
+
+    
 }

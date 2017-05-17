@@ -14,9 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true])->label("Заголовок")?>
 
-    <?= $form->field($model, 'body')->textarea(['maxlength' => true, 'rows'=>'20'])->label("Тело") ?>
+    <?= $form->field($model, 'body')->textarea(['maxlength' => false, 'rows'=>'20'])->label("Тело") ?>
 
-    <?= $form->field($model, 'html_body')->textarea(['maxlength' => true, 'rows'=>'20'])->label("Html тело") ?>
+    <?= $form->field($model, 'html_body')->textarea(['maxlength' => false, 'rows'=>'20'])->label("Html тело") ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

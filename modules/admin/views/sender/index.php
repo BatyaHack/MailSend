@@ -27,7 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'attribute'=>'messages_id',
-                'label'=>'Письмо-содержание'
+                'label'=>'Письмо-содержание',
+                'content'=> function ($data){
+                    return $data->getTitleMessages($data->id);
+                }
             ],
             [
                 'attribute' => 'status',
