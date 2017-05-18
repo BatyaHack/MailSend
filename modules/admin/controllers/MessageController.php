@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use app\models\Atach;
 use app\models\ImgUpload;
+use app\models\Sender;
 use Yii;
 use app\models\Message;
 use app\models\MessageSearch;
@@ -104,6 +105,17 @@ class MessageController extends Controller
      */
     public function actionDelete($id)
     {
+        //Каскадное удаление. Так как phpMyAdmin его не поддерживал
+        //РАСКОМЕНТИТЬ ПРИ ДЕПЛОЕ
+        /*Yii::$app
+            ->db
+            ->createCommand()
+            ->delete('sender', ['messages_id'=>$id])
+            ->execute();
+        */
+
+
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
