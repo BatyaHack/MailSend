@@ -30,6 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'email',
                 'label'=>'Почта'
             ],
+            [
+                'attribute'=>'data',
+                'label'=>'Дата'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -5,19 +5,23 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "emaillist".
+ * This is the model class for table "news".
  *
  * @property integer $id
+ * @property string $name
  * @property string $email
+ * @property string $skype
+ * @property string $data
+ * @property string $message
  */
-class Emaillist extends \yii\db\ActiveRecord
+class News extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'emaillist';
+        return 'news';
     }
 
     /**
@@ -26,7 +30,8 @@ class Emaillist extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email', 'data'], 'string', 'max' => 255]
+            [['message'], 'string'],
+            [['name', 'email', 'skype', 'data'], 'string', 'max' => 255],
         ];
     }
 
@@ -37,8 +42,11 @@ class Emaillist extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'name' => 'Name',
             'email' => 'Email',
-            'data' => 'Data'
+            'skype' => 'Skype',
+            'data' => 'Data',
+            'message' => 'Message',
         ];
     }
 }

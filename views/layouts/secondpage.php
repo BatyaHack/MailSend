@@ -10,7 +10,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\StartAsset;
 
 
-StartAsset::register($this);
+\app\assets\SecondAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -27,27 +27,27 @@ StartAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div style="display: flex; justify-content: flex-start">
-<?php
-echo Nav::widget([
-    'items' => [
-        Yii::$app->user->isGuest ? (
+    <?php
+    echo Nav::widget([
+        'items' => [
+            Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'url' => ['/site/login']]
-        ) : (
-            '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
+            ) : (
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
             )
-            . Html::endForm()
-            . '</li>'
-        )
-    ],
-]);
-?>
+        ],
+    ]);
+    ?>
 
-<a style="padding: 10px 7px" href="/web/admin">Админ Панель</a>
-    <a style="padding: 10px 7px" href=/web/news/index>Записаться на занятие</a>
+    <a style="padding: 10px 7px" href="<?=\yii\helpers\Url::to("/admin")?>">Админ Панель</a>
+    <a style="padding: 10px 7px" href="<?=\yii\helpers\Url::to("/news/index")?>">Записаться на занятие</a>
 </div>
 
 <?=$content?>

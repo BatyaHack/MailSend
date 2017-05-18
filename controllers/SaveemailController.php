@@ -21,6 +21,7 @@ class SaveemailController extends Controller
             //Добавлям в бд
             $email = new Emaillist();
             $email->email = $get['EMAIL'];
+            $email->data = date("Y-m-d");
             $email->save();
 
             echo "Спасибо. Вы подписаны на рассылку!";

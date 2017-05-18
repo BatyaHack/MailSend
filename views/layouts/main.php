@@ -37,7 +37,10 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
+            ['label' => 'Информация о пользователе', 'items' => [
+                ['label' => 'Ученики', 'url' => ['/admin/news/index']],
+                ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
+            ]],
             ['label' => 'Рассылки', 'url' => ['/admin/sender/index']],
             ['label' => 'Начать рассылку. *Cron', 'url' => ['/admin/sender/start']],
             ['label' => 'Сообщения', 'url' => ['/admin/message/index']],
