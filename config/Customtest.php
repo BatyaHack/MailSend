@@ -31,9 +31,9 @@ $config = [
             'viewPath' => '@app/mail',
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
-                'host' => '',
-                'username' => 'user@govno.da',
-                'password' => 'asdasdas321321asd',
+                'host' => 'Хост',
+                'username' => 'Имя',
+                'password' => 'Пароль',
                 'port' => 228,
                 'encryption' => 'ssl',
             ],

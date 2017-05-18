@@ -42,12 +42,14 @@ class SettingsController extends Controller
         if($model->load(Yii::$app->request->post()))
         {
             $url = Url::to("@app/config/web.php");
-            $test_url = Url::to("@app/config/Customtest.php"); //тестовый url НЕ ВКОЕМ СЛУЧАЕ ПРОСТО TEST. ТАК КАК ПРОСО test уже есть!!!
+            //$test_url = Url::to("@app/config/Customtest.php"); //тестовый url НЕ ВКОЕМ СЛУЧАЕ ПРОСТО TEST. ТАК КАК ПРОСО test уже есть!!!
 
             $file = fopen($url, "r");
-            $test_file = fopen($test_url, "a+"); //тестовый файл
+            //$test_file = fopen($test_url, "w+"); //тестовый файл
 
             $text = fread($file, filesize($url));
+            fclose($file);
+            $file = fopen($url, "w+");
 
             //$ssl = $model-> ssl == 0 ? "" : "ssl"; Спросить насчет этой дичи. Возмодно там не bool значения
 
@@ -56,7 +58,7 @@ class SettingsController extends Controller
             $text = preg_replace("/'username' =>\\s.*/", "'username' => '{$model->username}',", $text);
             $text = preg_replace("/'password' =>\\s.*/", "'password' => '{$model->password}',", $text);
 
-            fwrite($test_file, $text);
+            fwrite($file, $text);
         }
 
         return $this->render('index.php',[

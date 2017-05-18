@@ -16,7 +16,7 @@ class Settings extends Sender
     {
         return [
             [['port'], 'integer'],
-            [['password', 'username', 'hots'], 'string'],
+            [['password', 'username', 'host'], 'string'],
             [['ssl'], 'boolean'],
         ];
     }
