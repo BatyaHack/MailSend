@@ -64,6 +64,7 @@ class EmaillistController extends Controller
             {
                 $mail = new Emaillist();
                 $mail->email = $find_array[0][$i];
+                $mail->data = date("Y-m-d");
                 $mail->save(false);
             }
 
@@ -71,24 +72,26 @@ class EmaillistController extends Controller
 
             //Почистим бд от одинаковых эмейлов
 
-            $all_mail = Emaillist::find()->all();
+            /*$all_mail = Emaillist::find()->all();
 
             $only_mail = []; //Заполним массив только чистыми эмейлами
             foreach ($all_mail as $m){
-                $only_mail[] = $m->email;
+                $only_mail[] = $m;
             }
-
-            $only_mail = array_unique ($only_mail);//избавимя от повторений
+            //Убераем одинаковые значения
+            $only_mail= array_map("unserialize", array_unique( array_map("serialize", $only_mail) ));
+            var_dump($only_mail);
             Emaillist::deleteAll();//делаем через костыли!!! Чистим табилцу
 
-            //Переписывам таблицу
+            //Переписывамем таблицу
             foreach ($only_mail as $m)
             {
-                $mail = new Emaillist();
-                $mail->email = $m;
-                $mail->save(false);
-            }
 
+                $mail = new Emaillist();
+                $mail->email = $m->email;
+                $mail->data = $m->data;
+                $mail->save(false);
+            }*/
             //------------------------------------//
         }
 

@@ -38,6 +38,12 @@ class Module extends \yii\base\Module
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'allow' => true,
+                        'actions' => ['start'],
+                        'controllers'=> ['admin/sender'],
+                        'roles' => ['?'],
+                    ]
                 ],
             ],
         ];

@@ -148,7 +148,5 @@ class SenderController extends Controller
             $send_mail->counter_sender++;
             $send_mail->save(false);
         }
-
-        return $this->redirect(Url::to("index"));
     }
 }

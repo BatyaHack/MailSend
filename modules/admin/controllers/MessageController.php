@@ -105,14 +105,12 @@ class MessageController extends Controller
      */
     public function actionDelete($id)
     {
-        //Каскадное удаление. Так как phpMyAdmin его не поддерживал
-        //РАСКОМЕНТИТЬ ПРИ ДЕПЛОЕ
-        /*Yii::$app
+        Yii::$app
             ->db
             ->createCommand()
             ->delete('sender', ['messages_id'=>$id])
             ->execute();
-        */
+
 
 
 

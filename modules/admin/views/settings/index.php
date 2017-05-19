@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;?>
         <?= $form->field($model, 'ssl')->dropDownList(["0"=>"Нет","1"=>"Есть"])->label("Ssl") ?>
 
         <div class="form-group">
-            <?= Html::submitButton(['class' => 'btn btn-primary'])?>
+            <input class="btn btn-success" type="submit">
         </div>
 
         <?php ActiveForm::end(); ?>
