@@ -27,26 +27,7 @@ StartAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div style="display: flex; justify-content: flex-start">
-<?php
-echo Nav::widget([
-    'items' => [
-        Yii::$app->user->isGuest ? (
-            ['label' => 'Login', 'url' => ['/site/login']]
-        ) : (
-            '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>'
-        )
-    ],
-]);
-?>
-
-<a style="padding: 10px 7px" href="/web/admin">Админ Панель</a>
+    <!--<a style="padding: 10px 7px" href="/web/admin">Админ Панель</a>-->
     <a style="padding: 10px 7px" href=/web/news/index>Записаться на занятие</a>
 </div>
 
