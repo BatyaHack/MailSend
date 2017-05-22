@@ -10,11 +10,11 @@
 
     <h3>Выбирите файл</h3>
     <div class="form-group">
-        <?= $form->field($model, 'image')->fileInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'image')->fileInput(['required'=>'required']) ?>
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton("Начать рассылку", ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton("Прикрепить файл", ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -13,7 +13,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'messages_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Message::find()->all(), id, title))->label("ID письмя для рассылки") ?>
+    <?= $form->field($model, 'messages_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Message::find()->all(), 'id', 'title'))->label("ID письмя для рассылки") ?>
 
     <?= $form->field($model, 'status')->dropDownList([0=>"Не рассылать",1=>"Рассылать"])->label("Статус") ?>
 

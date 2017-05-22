@@ -81,7 +81,6 @@ AppAsset::register($this);
     </div>
 </footer>
 
-//Скрипт настройки TinyMPE
 <script>
     tinymce.init({
         selector: 'textarea',

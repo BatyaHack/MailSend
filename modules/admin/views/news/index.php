@@ -1,5 +1,6 @@
 <?php
 
+use yii\grid\ActionColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -37,7 +38,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'data',
                 'label'=>'Дата'
             ],
-            // 'message:ntext',
+            [
+                'class' => ActionColumn::className(),
+                'buttons'=>[
+                    'view'=>function () {
+                    },
+                    'update'=>function () {
+                    },
+                ],
+            ],
+
         ],
     ]); ?>
 </div>

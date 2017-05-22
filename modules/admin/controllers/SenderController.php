@@ -139,11 +139,8 @@ class SenderController extends Controller
                 $data_array[] = (Yii::getAlias('@app'). "/web/" . "uploads/" . $file->file_name);
             }
 
-
-
             Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,
                               $send_mail->message->body, $send_mail->message->html_body);
-
 
             $send_mail->counter_sender++;
             $send_mail->save(false);
