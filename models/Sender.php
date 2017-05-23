@@ -77,9 +77,9 @@ class Sender extends \yii\db\ActiveRecord
 
     //Метод отправки письма
     static public function sendEmail($address, $data=false, $subject=false, $textbody=false, $htmlbody=false){
-        $sender = Settings::currentEmail();
+
         $mail = Yii::$app->mailer->compose()
-            ->setFrom($sender)
+            ->setFrom("a@a.com.gmail")
             ->setTo($address)
             ->setSubject($subject) // тема письма
             ->setTextBody($textbody);
@@ -95,6 +95,4 @@ class Sender extends \yii\db\ActiveRecord
         }
         $mail->send();
     }
-
-    
 }

@@ -3,9 +3,12 @@
 namespace app\modules\admin\controllers;
 
 use app\models\Emaillist;
+use Error;
+use Swift_TransportException;
 use Yii;
 use app\models\Sender;
 use app\models\SenderSearch;
+use yii\base\ErrorException;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -139,11 +142,24 @@ class SenderController extends Controller
                 $data_array[] = (Yii::getAlias('@app'). "/web/" . "uploads/" . $file->file_name);
             }
 
-            Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,
-                              $send_mail->message->body, $send_mail->message->html_body);
+            try
+            {
+                Sender::sendEmail($addres[0]->email, $data_array,  $send_mail->message->title,
+                    $send_mail->message->body, $send_mail->message->html_body);
 
-            $send_mail->counter_sender++;
-            $send_mail->save(false);
+                $send_mail->counter_sender++;
+                $send_mail->save(false);
+            }
+            catch (ErrorException $ex) {
+                echo $ex->getMessage();
+                echo "<br>";
+                echo "В таблице закончились пользователи. Проверьте количество отправленных писем и количество email адрессов";
+            }
+            catch (Swift_TransportException $ex){
+                echo $ex->getMessage();
+                echo "<br>";
+                echo "Вы неправильно указали логин и пароль. Так же стоит подтвердить доступ на почте";
+            }
         }
     }
 }

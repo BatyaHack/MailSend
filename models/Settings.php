@@ -60,7 +60,7 @@ class Settings extends Sender
         $text = fread($file, filesize($url));
         fclose($file);
         $result = [];
-        preg_match('/(\S+@[a-z0-9.]*)/si', $text, $result);
-        return $result[1];
+        preg_match("/^(([a-zA-Z0-9_\\-.]+)@([a-zA-Z0-9\\-]+)\\.[a-zA-Z0-9\\-.]+$)/", $text, $result);
+        return $result[0];
     }
 }
