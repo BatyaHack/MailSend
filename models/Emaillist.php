@@ -26,7 +26,7 @@ class Emaillist extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email', 'data'], 'string', 'max' => 255]
+            [['email', 'data', 'visit'], 'string', 'max' => 255]
         ];
     }
 
@@ -38,7 +38,8 @@ class Emaillist extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'email' => 'Email',
-            'data' => 'Data'
+            'data' => 'Data',
+            'visit' => 'Visit'
         ];
     }
 }

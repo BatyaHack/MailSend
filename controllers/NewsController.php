@@ -29,6 +29,7 @@ class NewsController extends Controller
         $email_list = new Emaillist();
         $email_list->email = $email;
         $email_list->data = date('Y-m-d');
+        $email_list->visit = "Вторая страница";
         $email_list->save(false);
 
         $news = new News();

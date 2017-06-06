@@ -42,7 +42,6 @@ AppAsset::register($this);
                 ['label' => 'Список адресов', 'url' => ['/admin/emaillist/index']],
             ]],
             ['label' => 'Рассылки', 'url' => ['/admin/sender/index']],
-            ['label' => 'Начать рассылку. *Cron', 'url' => ['/admin/sender/start']],
             ['label' => 'Сообщения', 'url' => ['/admin/message/index']],
             ['label' => 'Настройки', 'url' => ['/admin/settings/index']],
 
